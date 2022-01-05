@@ -8,17 +8,17 @@ export default class Goal extends React.Component {
         super(props);
         this.state = {
             modalIsOpen: false,
-            goalProgress: props.goal.progress
+            goalProgress: 0
         };
 
         // This binding is necessary to make `this` work in the callback
         this.handleUpdateProgressSubmit = this.handleUpdateProgressSubmit.bind(this);
     }
 
-    // componentDidMount(){
-    //     //initialise state from props whem component mounts
-    //     this.setState({ goalProgress: this.props.goal.progress });
-    // }
+    componentDidMount(){
+        //initialise state from props whem component mounts
+        this.setState({ goalProgress: this.props.goal.progress });
+    }
 
     handleUpdateProgressSubmit(e) {
         e.preventDefault();
