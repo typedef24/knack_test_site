@@ -1,7 +1,6 @@
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
 import Modal from 'react-modal';
-// import "../App.css";
 
 export default class Goal extends React.Component {
     constructor(props){
@@ -53,8 +52,8 @@ export default class Goal extends React.Component {
         return (
             <div className="GoalDiv" style={
                 {
-                  backgroundColor: this.props.counter % 2 != 0 ? "white" : "",
-                  borderBottom: this.props.counter % 2 != 0 ? "1px solid gray" : "none"
+                  backgroundColor: this.props.counter % 2 !== 0 ? "white" : "",
+                  borderBottom: this.props.counter % 2 !== 0 ? "1px solid gray" : "none"
                 }
             }>
                 <div className="GoalDetails">
