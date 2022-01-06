@@ -64,7 +64,7 @@ class App extends React.Component {
     // copy goals array from state into a temporal array
     let tempGoals = this.state.goals;
     // add newGoal at the begining of tempGoals
-    tempGoals.push(newGoal);  // added to the end due to runtime bug
+    tempGoals.unshift(newGoal);
     /* close the modal then replace goals in state with tempGoals
       Also reset form inputs for good UX
     */

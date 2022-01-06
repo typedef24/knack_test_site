@@ -14,6 +14,14 @@ export default class Goal extends React.Component {
         this.handleUpdateProgressSubmit = this.handleUpdateProgressSubmit.bind(this);
     }
 
+    // Props will probably change when a new goal is added to the begining of the array in the parent, so we track that
+    componentDidUpdate(prevProps) {
+        // Typical usage (don't forget to compare props):
+        if ( this.props.goal.progress !== prevProps.goal.progress) {
+            this.setState({ goalProgress: this.props.goal.progress });
+        }
+    }
+
     componentDidMount(){
         //initialise state from props whem component mounts
         this.setState({ goalProgress: this.props.goal.progress });
